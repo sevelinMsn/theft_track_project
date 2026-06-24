@@ -1,5 +1,5 @@
 /* ============================================
-   TheftTrack System — Global Styles
+   Theft Track & Reporting — Global Styles
    Colors: Dark Blue | White | Light Gray
    ============================================ */
 
@@ -98,11 +98,12 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   color: var(--color-white);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  max-width: 11.5rem;
 }
 
 .logo:hover {
@@ -111,17 +112,26 @@ img {
   opacity: 0.9;
 }
 
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--color-white);
-  color: var(--color-primary);
-  border-radius: var(--radius);
-  font-size: 0.85rem;
-  font-weight: 800;
+.logo-text {
+  letter-spacing: -0.02em;
+}
+
+.logo--full {
+  max-width: 12.5rem;
+}
+
+.logo--full .logo-text {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.logo--footer {
+  margin-bottom: 0.75rem;
+  max-width: 14rem;
+}
+
+.logo--footer .logo-text {
+  font-size: 1.1rem;
 }
 
 .nav {
@@ -447,12 +457,10 @@ main {
 .auth-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
   margin-bottom: 1.5rem;
   text-decoration: none;
   color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1.25rem;
 }
 
 .auth-brand:hover {
@@ -460,17 +468,13 @@ main {
   opacity: 0.85;
 }
 
-.auth-brand .logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--radius);
-  font-size: 0.85rem;
-  font-weight: 800;
+.auth-brand .logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+  text-align: center;
+  max-width: 16rem;
 }
 
 .auth-card {

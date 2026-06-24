@@ -38,7 +38,7 @@ if (isset($_GET['logout'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TheftTrack Admin Dashboard</title>
+  <title>Theft Track &amp; Reporting — Admin Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@ if (isset($_GET['logout'])) {
 <?php if (!$isAdmin): ?>
   <div class="admin-login-wrap">
     <div class="admin-card">
-      <h1>TheftTrack Admin</h1>
+      <h1>Theft Track &amp; Reporting Admin</h1>
       <p class="sub">Sign in to manage reports, users, and investigations.</p>
       <?php if (!empty($loginError)): ?>
         <p class="error"><?= escapeHtml($loginError) ?></p>
@@ -70,8 +70,8 @@ if (isset($_GET['logout'])) {
   <div class="admin-layout">
     <aside class="admin-sidebar">
       <div class="sidebar-brand">
-        <span class="brand-icon">TT</span>
-        <span>Admin Panel</span>
+        <span class="sidebar-brand-name">Theft Track &amp; Reporting</span>
+        <span class="sidebar-brand-sub">Admin Panel</span>
       </div>
       <nav class="sidebar-nav">
         <button type="button" class="nav-item active" data-tab="overview">Overview</button>

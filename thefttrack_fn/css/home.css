@@ -1,16 +1,6 @@
 /* ============================================
-   TheftTrack — Home Page Styles
+   Theft Track & Reporting — Home Page Styles
    ============================================ */
-
-.logo--full .logo-text {
-  font-size: 1.05rem;
-  line-height: 1.2;
-}
-
-.logo-system {
-  font-weight: 500;
-  opacity: 0.92;
-}
 
 .home-main {
   overflow-x: hidden;
@@ -366,14 +356,6 @@
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 1.5rem;
-}
-
-.logo--footer {
-  margin-bottom: 0.75rem;
-}
-
-.logo--footer .logo-text {
-  font-size: 1.1rem;
 }
 
 .footer-tagline {

@@ -1,5 +1,5 @@
 /**
- * TheftTrack — Home page (stats counter animation)
+ * Theft Track & Reporting — Home page (stats counter animation)
  */
 (function () {
   "use strict";
