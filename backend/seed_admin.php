@@ -2,7 +2,7 @@
 /**
  * seed_admin.php — Create the default admin account (run once)
  *
- * Visit in browser: http://localhost/thefttrack/backend/seed_admin.php
+ * Visit in browser: http://localhost/theft_track_project/backend/seed_admin.php
  * Login: admin / admin123
  *
  * Delete this file on a real production server.

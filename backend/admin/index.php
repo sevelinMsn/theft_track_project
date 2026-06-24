@@ -81,7 +81,7 @@ if (isset($_GET['logout'])) {
         <button type="button" class="nav-item" data-tab="activity">Activity Log</button>
       </nav>
       <div class="sidebar-footer">
-        <a href="../../thefttrack_fn/index.html" class="btn btn-ghost btn-sm sidebar-link">View Public Site</a>
+        <a href="../../public/index.html" class="btn btn-ghost btn-sm sidebar-link">View Public Site</a>
         <a href="?logout=1" class="btn btn-ghost btn-sm sidebar-link">Log out</a>
       </div>
     </aside>
@@ -135,7 +135,7 @@ if (isset($_GET['logout'])) {
       </section>
 
       <section id="panel-suspects" class="admin-panel">
-        <p class="panel-desc">Add suspects with photo and details. Active suspects appear on the public <a href="../../thefttrack_fn/fraud.html" target="_blank" rel="noopener">Fraud Alerts</a> page.</p>
+        <p class="panel-desc">Add suspects with photo and details. Active suspects appear on the public <a href="../../public/fraud.html" target="_blank" rel="noopener">Fraud Alerts</a> page.</p>
         <div class="admin-two-col admin-two-col--suspects">
           <div class="panel-card">
             <h2 id="suspect-form-title">Add suspect</h2>

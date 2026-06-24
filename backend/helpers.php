@@ -1,6 +1,6 @@
 <?php
 /**
- * helpers.php — Shared functions for all TheftTrack API files
+ * helpers.php — Shared functions for all Theft Track & Reporting API files
  *
  * This file is included by most endpoints. It does NOT connect to the database
  * by itself — include db.php first when you need $conn.

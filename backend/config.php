@@ -10,14 +10,14 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', ''); // XAMPP default: empty password
-define('DB_NAME', 'thefttrack_db');
+define('DB_NAME', 'theft_track_reporting_db');
 
 // --- Admin panel login (change before going live) ---
 define('ADMIN_USERNAME', 'admin');
 define('ADMIN_PASSWORD', 'admin123');
 
 // --- PHP session cookie name for logged-in users ---
-define('SESSION_NAME', 'thefttrack_session');
+define('SESSION_NAME', 'ttr_session');
 
 // --- Report status labels (must match database ENUM values) ---
 define('STATUS_PENDING', 'Pending');

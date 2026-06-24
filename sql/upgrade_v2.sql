@@ -1,5 +1,5 @@
 -- Run this if you already imported an older schema.sql
-USE thefttrack_db;
+USE theft_track_reporting_db;
 
 CREATE TABLE IF NOT EXISTS admins (
   id INT AUTO_INCREMENT PRIMARY KEY,

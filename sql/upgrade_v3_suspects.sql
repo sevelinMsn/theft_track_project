@@ -1,5 +1,5 @@
--- Run in phpMyAdmin if you already have thefttrack_db (adds admin-managed suspects)
-USE thefttrack_db;
+-- Run in phpMyAdmin if you already have theft_track_reporting_db (adds admin-managed suspects)
+USE theft_track_reporting_db;
 
 CREATE TABLE IF NOT EXISTS suspects (
   id INT AUTO_INCREMENT PRIMARY KEY,

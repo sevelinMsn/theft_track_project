@@ -2,7 +2,8 @@
 (function () {
   "use strict";
 
-  const XAMPP_API_FALLBACK = "http://localhost/thefttrack/backend/";
+  const PUBLIC_DIR = "public";
+  const XAMPP_API_FALLBACK = "http://localhost/theft_track_project/backend/";
 
   function getApiBase() {
     const loc = window.location;
@@ -10,7 +11,7 @@
       return XAMPP_API_FALLBACK;
     }
 
-    const fnIdx = loc.pathname.indexOf("/thefttrack_fn");
+    const fnIdx = loc.pathname.indexOf("/" + PUBLIC_DIR);
     if (fnIdx !== -1) {
       return loc.origin + loc.pathname.substring(0, fnIdx) + "/backend/";
     }
@@ -31,9 +32,9 @@
     const base = getApiBase();
     return base.indexOf("://") !== -1 && !base.startsWith(window.location.origin);
   }
-  const STORAGE_USERS = "thefttrack_users";
-  const STORAGE_SESSION = "thefttrack_session";
-  const STORAGE_REPORTS = "thefttrack_reports";
+  const STORAGE_USERS = "ttr_users";
+  const STORAGE_SESSION = "ttr_session";
+  const STORAGE_REPORTS = "ttr_reports";
 
   let currentUser = null;
 
@@ -110,10 +111,10 @@
       });
     } catch (err) {
       if (window.location.protocol === "file:") {
-        throw new Error("Open the site through XAMPP: http://localhost/thefttrack/thefttrack_fn/ (not as a local file).");
+        throw new Error("Open the site through XAMPP (Apache), not as a local file. Example: http://localhost/theft_track_project/public/");
       }
       if (isApiCrossOrigin()) {
-        throw new Error("Cannot reach PHP backend. Start Apache in XAMPP and use http://localhost/thefttrack/thefttrack_fn/");
+        throw new Error("Cannot reach PHP backend. Start Apache in XAMPP and open http://localhost/theft_track_project/public/");
       }
       throw new Error("Cannot reach server. Is Apache/MySQL running in XAMPP?");
     }
@@ -1052,7 +1053,7 @@
 
   function warnIfWrongOrigin() {
     if (window.location.protocol === "file:") {
-      showToast("Use XAMPP URL: http://localhost/thefttrack/thefttrack_fn/", "error");
+      showToast("Open via XAMPP: http://localhost/theft_track_project/public/", "error");
     }
   }
 

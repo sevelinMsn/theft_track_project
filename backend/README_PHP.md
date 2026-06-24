@@ -1,13 +1,13 @@
-# TheftTrack — PHP Backend Guide (Beginners)
+# Theft Track & Reporting — PHP Backend Guide (Beginners)
 
-This folder contains the **API** (Application Programming Interface) for TheftTrack.  
+This folder contains the **API** (Application Programming Interface) for Theft Track & Reporting.
 Each `.php` file is one endpoint the frontend (HTML/JavaScript) calls with `fetch()`.
 
 ## How a request works
 
 ```
 Browser (fraud.html, report.html, …)
-    → fetch('http://localhost/thefttrack/backend/login.php', …)
+    → fetch('http://localhost/theft_track_project/backend/login.php', …)
         → login.php runs
             → db.php connects to MySQL ($conn)
             → helpers.php provides shared functions

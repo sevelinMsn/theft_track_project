@@ -1,11 +1,11 @@
--- TheftTrack System — Full database setup for XAMPP / phpMyAdmin
+-- Theft Track & Reporting — Full database setup for XAMPP / phpMyAdmin
 -- Run in phpMyAdmin or: mysql -u root < schema.sql
 
-CREATE DATABASE IF NOT EXISTS thefttrack_db
+CREATE DATABASE IF NOT EXISTS theft_track_reporting_db
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE thefttrack_db;
+USE theft_track_reporting_db;
 
 -- Registered users
 CREATE TABLE IF NOT EXISTS users (
