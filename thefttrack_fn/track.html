@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Case — TheftTrack System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="track">
+
+  <header class="header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">TT</span><span class="logo-text">TheftTrack</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link" data-nav-page="home">Home</a>
+        <a href="report.html" class="nav-link" data-nav-page="report">Report Theft</a>
+        <a href="track.html" class="nav-link" data-nav-page="track">Track Case</a>
+        <a href="fraud.html" class="nav-link" data-nav-page="fraud">Fraud Alerts</a>
+        <a href="dashboard.html" class="nav-link nav-user hidden" data-nav-page="dashboard">Dashboard</a>
+        <a href="login.html" class="nav-link nav-auth" data-nav-page="login">Login</a>
+        <a href="register.html" class="nav-link nav-auth nav-register-btn" data-nav-page="register">Register</a>
+        <button type="button" class="btn btn-outline btn-sm nav-user hidden" id="btn-logout">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container track-page">
+      <div class="track-search-card">
+        <h1>Track Your Case</h1>
+        <p>Enter your Tracking ID to view case status and notification updates.</p>
+        <form id="track-form" class="form" novalidate>
+          <div class="form-group">
+            <label for="track-id">Tracking ID *</label>
+            <input type="text" id="track-id" name="reportId" placeholder="e.g. TT-2026-A1B2C3" required autocomplete="off">
+            <span class="form-error" data-error="track-id"></span>
+          </div>
+          <div class="form-group">
+            <label for="track-phone">Phone Number (optional verification)</label>
+            <input type="tel" id="track-phone" name="phone" placeholder="Phone used when filing the report">
+            <p class="field-hint">If provided, must match the phone on the report for extra verification.</p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Search Case</button>
+        </form>
+      </div>
+      <div id="track-result" class="track-result hidden"></div>
+    </div>
+  </main>
+
+  <footer class="footer" id="main-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 TheftTrack System. Digital Theft Reporting & Tracking.</p>
+      <p class="footer-note">TheftTrack System — PHP/MySQL backend</p>
+    </div>
+  </footer>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — TheftTrack System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register" class="auth-page">
+
+  <main>
+    <div class="container auth-container">
+      <a href="index.html" class="auth-brand">
+        <span class="logo-icon">TT</span>
+        <span class="logo-text">TheftTrack</span>
+      </a>
+      <div class="auth-card">
+        <h1>Create Account</h1>
+        <p class="auth-subtitle">Register to save your reports and access updates easily</p>
+        <form id="register-form" class="form" novalidate>
+          <div class="form-group">
+            <label for="reg-fullname">Full Name *</label>
+            <input type="text" id="reg-fullname" name="fullname" placeholder="John Doe" required>
+            <span class="form-error" data-error="reg-fullname"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address *</label>
+            <input type="email" id="reg-email" name="email" placeholder="you@example.com" required autocomplete="email">
+            <span class="form-error" data-error="reg-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Phone Number *</label>
+            <input type="tel" id="reg-phone" name="phone" placeholder="+250 788 000 000" required>
+            <span class="form-error" data-error="reg-phone"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password *</label>
+            <input type="password" id="reg-password" name="password" placeholder="At least 6 characters" required minlength="6" autocomplete="new-password">
+            <span class="form-error" data-error="reg-password"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm">Confirm Password *</label>
+            <input type="password" id="reg-confirm" name="confirm" placeholder="Re-enter password" required minlength="6" autocomplete="new-password">
+            <span class="form-error" data-error="reg-confirm"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+        <p class="auth-footer">
+          Already have an account? <a href="login.html">Sign in here</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="main-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 TheftTrack System. Digital Theft Reporting & Tracking.</p>
+      <p class="footer-note">TheftTrack System — PHP/MySQL backend</p>
+    </div>
+  </footer>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <script src="js/common.js"></script>
+</body>
+</html>

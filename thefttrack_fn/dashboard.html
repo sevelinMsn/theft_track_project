@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard — TheftTrack System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body data-page="dashboard">
+
+  <header class="header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">TT</span><span class="logo-text">TheftTrack</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link" data-nav-page="home">Home</a>
+        <a href="report.html" class="nav-link" data-nav-page="report">Report Theft</a>
+        <a href="track.html" class="nav-link" data-nav-page="track">Track Case</a>
+        <a href="fraud.html" class="nav-link" data-nav-page="fraud">Fraud Alerts</a>
+        <a href="dashboard.html" class="nav-link nav-user hidden" data-nav-page="dashboard">Dashboard</a>
+        <a href="login.html" class="nav-link nav-auth" data-nav-page="login">Login</a>
+        <a href="register.html" class="nav-link nav-auth nav-register-btn" data-nav-page="register">Register</a>
+        <button type="button" class="btn btn-outline btn-sm nav-user hidden" id="btn-logout">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="container">
+      <div id="dashboard-guest" class="dashboard-guest hidden">
+        <p class="empty-state">Please <a href="login.html">sign in</a> to access your dashboard.</p>
+      </div>
+
+      <div id="dashboard-app" class="hidden">
+        <div class="dashboard-header">
+          <div>
+            <h1>My Dashboard</h1>
+            <p id="dashboard-welcome">Welcome back</p>
+          </div>
+          <a href="report.html" class="btn btn-primary">+ New Report</a>
+        </div>
+
+        <section class="dash-profile card" id="dash-profile"></section>
+
+        <section class="dash-stats" id="dash-stats"></section>
+
+        <div class="dashboard-grid">
+          <section class="dash-panel card">
+            <div class="dash-panel-head">
+              <h2>My Reports</h2>
+              <span class="dash-badge" id="reports-count">0</span>
+            </div>
+            <div id="dash-reports-list" class="dash-reports-list"></div>
+          </section>
+
+          <section class="dash-panel card">
+            <div class="dash-panel-head">
+              <h2>Notifications</h2>
+            </div>
+            <div id="dash-notifications" class="dash-notifications"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="report-detail-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="detail-modal-title">
+    <div class="modal-backdrop" data-close-detail></div>
+    <div class="modal-content modal-content--wide card">
+      <button type="button" class="modal-close" data-close-detail aria-label="Close">&times;</button>
+      <h2 id="detail-modal-title">Report Details</h2>
+      <div id="report-detail-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 TheftTrack System. Digital Theft Reporting & Tracking.</p>
+    </div>
+  </footer>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <script src="js/common.js"></script>
+</body>
+</html>

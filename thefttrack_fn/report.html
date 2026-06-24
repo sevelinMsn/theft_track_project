@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Theft — TheftTrack System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="report">
+
+  <header class="header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">TT</span><span class="logo-text">TheftTrack</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link" data-nav-page="home">Home</a>
+        <a href="report.html" class="nav-link" data-nav-page="report">Report Theft</a>
+        <a href="track.html" class="nav-link" data-nav-page="track">Track Case</a>
+        <a href="fraud.html" class="nav-link" data-nav-page="fraud">Fraud Alerts</a>
+        <a href="dashboard.html" class="nav-link nav-user hidden" data-nav-page="dashboard">Dashboard</a>
+        <a href="login.html" class="nav-link nav-auth" data-nav-page="login">Login</a>
+        <a href="register.html" class="nav-link nav-auth nav-register-btn" data-nav-page="register">Register</a>
+        <button type="button" class="btn btn-outline btn-sm nav-user hidden" id="btn-logout">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container form-page-container">
+      <div class="form-page-header">
+        <h1>Report a Theft</h1>
+        <p id="report-mode-hint">File a report as a guest or while signed in. Fields marked * are required.</p>
+      </div>
+
+      <div id="report-guest-banner" class="info-banner">
+        <strong>Guest report:</strong> You do not need an account. Save your Tracking ID after submission.
+        <a href="login.html">Sign in</a> to link reports to your profile.
+      </div>
+
+      <form id="report-form" class="form report-form" novalidate>
+        <fieldset class="form-section">
+          <legend>Your Contact Information</legend>
+          <div class="form-group">
+            <label for="report-fullname">Full Name *</label>
+            <input type="text" id="report-fullname" name="fullname" placeholder="Your full name" required>
+            <span class="form-error" data-error="report-fullname"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="report-phone">Phone Number *</label>
+              <input type="tel" id="report-phone" name="phone" placeholder="+250 788 000 000" required>
+              <span class="form-error" data-error="report-phone"></span>
+            </div>
+            <div class="form-group">
+              <label for="report-email">Email (optional)</label>
+              <input type="email" id="report-email" name="email" placeholder="you@example.com">
+              <span class="form-error" data-error="report-email"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Theft Details</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="item-category">Theft Category *</label>
+              <select id="item-category" name="category" required>
+                <option value="">Select category</option>
+                <option value="electronics">Electronics</option>
+                <option value="vehicle">Vehicle</option>
+                <option value="jewelry">Jewelry</option>
+                <option value="documents">Documents / ID</option>
+                <option value="cash">Cash</option>
+                <option value="clothing">Clothing</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-error" data-error="item-category"></span>
+            </div>
+            <div class="form-group">
+              <label for="item-name">Item Name *</label>
+              <input type="text" id="item-name" name="itemName" placeholder="e.g. Samsung Galaxy S24" required>
+              <span class="form-error" data-error="item-name"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="item-description">Theft Description *</label>
+            <textarea id="item-description" name="description" rows="4" placeholder="Describe the item, serial numbers, color, marks..." required></textarea>
+            <span class="form-error" data-error="item-description"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="incident-location">Location *</label>
+              <input type="text" id="incident-location" name="location" placeholder="Street, district, city" required>
+              <span class="form-error" data-error="incident-location"></span>
+            </div>
+            <div class="form-group">
+              <label for="incident-date">Date of Theft *</label>
+              <input type="date" id="incident-date" name="incidentDate" required>
+              <span class="form-error" data-error="incident-date"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="suspect-info">Suspect Information (optional)</label>
+            <textarea id="suspect-info" name="suspect" rows="3" placeholder="Description, vehicle, clothing, direction fled..."></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Evidence Upload</legend>
+          <div class="form-group">
+            <label for="report-file">Upload Image or Document (optional)</label>
+            <input type="file" id="report-file" name="file" accept="image/*,.pdf,.doc,.docx">
+            <p class="field-hint">Accepted: images, PDF, Word. Max 5MB (demo preview only).</p>
+            <div id="file-preview" class="file-preview hidden"></div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary">Submit Report</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer" id="main-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 TheftTrack System. Digital Theft Reporting & Tracking.</p>
+      <p class="footer-note">TheftTrack System — PHP/MySQL backend</p>
+    </div>
+  </footer>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <div id="report-modal" class="modal hidden" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <div class="modal-success-icon" aria-hidden="true">&#10003;</div>
+      <h2 id="modal-title">Report Submitted Successfully</h2>
+      <p>Your theft report has been received and is now pending review.</p>
+      <div class="modal-report-id">
+        <span class="label">Your Tracking ID</span>
+        <code id="modal-report-id">TT-000000</code>
+        <button type="button" class="btn-copy" id="btn-copy-id" title="Copy ID">Copy</button>
+      </div>
+      <p class="modal-note">Save this ID. Use it on the Track Case page to follow status and updates.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" data-close-modal>Close</button>
+        <button type="button" class="btn btn-primary" id="modal-track-btn">Track This Case</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+</body>
+</html>

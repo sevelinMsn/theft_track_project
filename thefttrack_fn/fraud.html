@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraud Alerts &amp; High-Risk Suspects — TheftTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="fraud">
+
+  <header class="header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">TT</span><span class="logo-text">TheftTrack</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link" data-nav-page="home">Home</a>
+        <a href="report.html" class="nav-link" data-nav-page="report">Report Theft</a>
+        <a href="track.html" class="nav-link" data-nav-page="track">Track Case</a>
+        <a href="fraud.html" class="nav-link" data-nav-page="fraud">Fraud Alerts</a>
+        <a href="dashboard.html" class="nav-link nav-user hidden" data-nav-page="dashboard">Dashboard</a>
+        <a href="login.html" class="nav-link nav-auth" data-nav-page="login">Login</a>
+        <a href="register.html" class="nav-link nav-auth nav-register-btn" data-nav-page="register">Register</a>
+        <button type="button" class="btn btn-outline btn-sm nav-user hidden" id="btn-logout">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="fraud-page-hero">
+      <div class="container">
+        <p class="hero-badge hero-badge--light">Public Safety Information</p>
+        <p id="fraud-live-badge" class="fraud-live-badge hidden" aria-live="polite">Live data from community reports</p>
+        <h1>Fraud Alerts &amp; High-Risk Suspects</h1>
+        <p class="fraud-hero-text">
+          Live view of theft reports from the database — case details, high-risk locations, and suspect information filed by the community.
+        </p>
+      </div>
+    </div>
+
+    <div class="container fraud-page-body">
+      <section class="fraud-section" aria-labelledby="fraud-alerts-heading">
+        <div class="fraud-section-header">
+          <span class="section-icon section-icon--alert" aria-hidden="true">!</span>
+          <div>
+            <h2 id="fraud-alerts-heading">Reported Cases</h2>
+            <p>Theft reports stored in the database (one card per report)</p>
+          </div>
+        </div>
+        <div id="fraud-alerts-grid" class="fraud-grid fraud-grid--alerts"></div>
+      </section>
+
+      <section class="fraud-section" aria-labelledby="high-risk-heading">
+        <div class="fraud-section-header">
+          <span class="section-icon section-icon--area" aria-hidden="true">&#9673;</span>
+          <div>
+            <h2 id="high-risk-heading">High-Risk Areas</h2>
+            <p>Locations with elevated theft and fraud report activity</p>
+          </div>
+        </div>
+        <div id="high-risk-grid" class="fraud-grid fraud-grid--areas"></div>
+      </section>
+
+      <section class="fraud-section" aria-labelledby="suspects-heading">
+        <div class="fraud-section-header">
+          <span class="section-icon section-icon--suspect" aria-hidden="true">&#9787;</span>
+          <div>
+            <h2 id="suspects-heading">Suspects</h2>
+            <p>Published by administrators from the database</p>
+          </div>
+        </div>
+        <div id="suspects-grid" class="fraud-grid fraud-grid--suspects"></div>
+      </section>
+
+      <section class="fraud-cta" aria-labelledby="fraud-cta-heading">
+        <div class="fraud-cta-inner">
+          <h2 id="fraud-cta-heading">Witnessed theft or fraud?</h2>
+          <p>File a report to help authorities track cases and improve community safety data on this page.</p>
+          <div class="fraud-cta-actions">
+            <a href="report.html" class="btn btn-primary btn-lg">Report Theft</a>
+            <a href="track.html" class="btn btn-secondary btn-lg">Track a Case</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" id="main-footer">
+    <div class="container footer-grid footer-grid--compact">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-icon">TT</span><span class="logo-text">TheftTrack</span></a>
+        <p class="footer-tagline">Digital theft reporting and case tracking.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html">Report Theft</a></li>
+          <li><a href="track.html">Track Case</a></li>
+          <li><a href="fraud.html">Fraud Alerts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TheftTrack System. Digital Theft Reporting &amp; Tracking.</p>
+      <p id="fraud-footer-note" class="footer-note">Connected to PHP/MySQL backend</p>
+    </div>
+  </footer>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <script src="js/common.js"></script>
+</body>
+</html>
